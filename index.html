@@ -15,7 +15,7 @@
 
 </head>
 
-<body style="font-size: 12px;">
+<body style="font-size: 12px;" >
     <!-- <input type="text" readonly="" id="input-invite-code"> -->
     <!--<a href="https://kf.saleonline.vip/index/index?code=6%2BOTOfSIiSeF0yYFJIXazW00L01262Xlw7uaRhOzTQ9RL7oNsJuYdo5mAS%2FBQQbm3iw2zi4GInhvF37WkNeQkkEQBBUEZjMywNLcUBr0rE%2BQaaxx0%2FwVYNp7CmQHCPEmSEeY">-->
     <!--<a href="https://kf.saleonline.vip/index/index/home?visiter_id=&visiter_name=&avatar=&business_id=admin&groupid=0&service_name=kefu" target="_blank">-->
@@ -35,27 +35,40 @@
             </ul>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <h1 class="blink-text">Hello World</h1>
 
-    <div class="page" >
+                    <button class="download-button">Tải ngay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page">
         <div class="hader">
             <img src="./img/headernew.png">
         </div>
         <div class="container">
             <div class="photos">
-                <div><img src="./img/p111.png"></div>
-                <div><img src="./img/p22.png"></div>
-                <div><img src="./img/p33.png"></div>
-                <div><img src="./img/p44.png"></div>
-                <div><img src="./img/p55.png"></div>
-                <div><img src="./img/p66.png"></div>
+                <div><img src="./img/headernew.png"></div>
+                <div><img src="./img/headernew.png"></div>
+                <div><img src="./img/headernew.png"></div>
+                <div><img src="./img/headernew.png"></div>
+                <div><img src="./img/headernew.png"></div>
+                <div><img src="./img/headernew.png"></div>
             </div>
-            <input type="text" name="search"> <button id="search">Tìm kiếm</button>
+            <div class="search-box">
+                <input type="text" name="search"> <button id="search">Tìm kiếm</button>
+            </div>
             <ul class="list">
-                
+
             </ul>
-            <div class="more">Xem Thêm Tại Đây</div>
+            <div class="more"  data-bs-toggle="modal" data-bs-target="#exampleModal">Xem Thêm Tại Đây</div>
         </div>
-        <div class="footer" id="footer">
+        <div class="footer" id="footer" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <div class="logo"><img src="./img/logo.png"></div>
             <div class="tips_text">
                 <div><b class="textola" style="color:#f8f8fa">My-Chat ỨNG DỤNG HẸN HÒ<br> MIỄN PHÍ 100%</b><span></span>
