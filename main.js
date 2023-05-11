@@ -21,13 +21,13 @@ $(document).ready(function () {
                         <li class="item" data-id="${item.id}"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="ava">
                             <img src="${item.image}">
+                            <div class="ava-info">
+                                <p>${item.name} ${item.age} Tuổi</p>
+                                <p class="area"><em></em> ${item.location}</p>
+                            </div>
                         </div>
                         <div class="content">
                             <div class="info">
-                                <span>${item.age} Tuổi</span>
-                                <span>${item.height}</span>
-                                <span>${item.job}</span>
-                                <span class="area"><em></em> ${item.location}</span>
                             </div>
                             <div class="taga">
                                

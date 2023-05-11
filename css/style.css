@@ -16,22 +16,40 @@ em{
 }
 .list {
 	padding: 0 0.666666rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 10px;
 }
 
 .item {
 	padding: 0.4rem 0;
 	border-bottom: 1px solid #EACEB5;
-	display: flex;
+	list-style-type: none;
 }
 .item .ava{
-	width: 2.613333rem;
-	height: 2.613333rem;
+	height: 300px;
 	border:1px solid #EED3BA;
 	border-radius: 0.533333rem;
 	margin-right: 0.4rem;
 	overflow: hidden;
 	margin: auto;
+	position: relative;
 }
+
+.item .ava-info {
+	padding: 0 10px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	font-size: 16px;
+}
+
+.item .ava-info p {
+	margin: 0;
+}
+
+
 .item .ava img{
 	border-radius: 0.533333rem;
 	min-height: 100%;
@@ -40,7 +58,7 @@ em{
 	flex:1;
 }
 .item .call{
-	font-size: 0.32rem;
+	font-size: 16px;
 	color:#000;
 	background-image: linear-gradient(to bottom,#e2b7b9,#e89a9e);
 	font-weight: bold;
@@ -50,7 +68,7 @@ em{
 	margin-top: 5px;
 }
 .item .taga span{
-	font-size: 0.32rem;
+	font-size: 16px;
     color: white;
     display: inline-block;
     margin-right: 0.133333rem;
@@ -66,7 +84,7 @@ em{
 	margin:0.133333rem 0;
 }
 .item .info span{
-	font-size: 0.32rem;
+	font-size: 16px;
 }
 .item .info span:not(.area){
 	padding:0 0.08rem;
@@ -149,15 +167,16 @@ em{
 	padding-right: 0.133333rem;
 }
 .footer .tips_text div span{
-	font-size: 0.32rem;
+	font-size: 16px;
 }
 .footer .tips_text>span {
 	color: #ebb4ff;
-	font-size: 0.32rem;
+	font-size: 16px;
 }
 
 .footer .download {
-	height: 1.066666rem;
+	/* height: 1.066666rem; */
+	padding: 10px 10px;
 	line-height: 1.066666rem;
 	color: #FFFFFF;
 	/*background-color: #ab1ee1;*/
@@ -165,7 +184,7 @@ em{
 	padding: 0 0.4rem;
 	border-radius: 5rem;
 	white-space: nowrap;
-	font-size: 0.32rem;
+	font-size: 16px;
 	animation: flash 1s infinite;
 	flex-shrink: 0;
    position: absolute;
@@ -266,15 +285,22 @@ em{
 		font-size: 0.426666rem;
 	}
 }
+
+@media screen and (max-width: 768px){
+	.list {
+		grid-template-columns: 1fr;
+	}
+}
+
 .more{
 	text-align: center;
-	font-size: 0.373333rem;
+	font-size: 18px;
 	/*background-image: linear-gradient(to bottom,#E1C5AA,#FAE6CC);*/
 	background-image: linear-gradient(to bottom,#e2b7b9,#e89a9e);
 	color:white;
 	width: 60%;
+	padding: 10px 20px;
 	margin: 0.533333rem auto;
-	height: 0.933333rem;
 	line-height: 0.933333rem;
 	border-radius: 200rem;
 	cursor: pointer;
