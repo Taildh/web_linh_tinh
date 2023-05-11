@@ -6,9 +6,17 @@ $(document).ready(function () {
             method: "GET",
             dataType: "json",
             success: function (response) {
-                response.forEach(function (item) {
+                $(".list").html("");
+                let searchKeyword = $("input[name=search]").val();
+                console.log(searchKeyword);
+                // filter 
+
+                let data = response.filter(function(item) {
+                    return item.name.toUpperCase().includes(searchKeyword.toUpperCase());
+                })
+                console.log(data);
+                data.forEach(function (item) {
                     let id = item.id;
-                    $(".list").html("");
                     $(".list").append(`
                         <li class="item" data-id="${item.id}">
                         <div class="ava">
@@ -31,7 +39,6 @@ $(document).ready(function () {
                     `
                     )
                     item.hobbies.forEach(function (hobbie) {
-                        console.log(id);
                         $('.list').find('.item[data-id="' + id + '"]').find(".taga").append(
                             `<span>${hobbie}</span>`
                         );
@@ -41,10 +48,10 @@ $(document).ready(function () {
         })
     }
 
-
     $("#search").click(function () {
         getData();
     })
+
 
     getData();
 })
