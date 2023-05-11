@@ -18,7 +18,7 @@ $(document).ready(function () {
                 data.forEach(function (item) {
                     let id = item.id;
                     $(".list").append(`
-                        <li class="item" data-id="${item.id}">
+                        <li class="item" data-id="${item.id}"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="ava">
                             <img src="${item.image}">
                         </div>
